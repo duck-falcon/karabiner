@@ -1,0 +1,35 @@
+{
+  "title": "かな 英数 と別のキーとの同時押しをそれぞれ shift キー+別のキーに割り当てる",
+  "rules": [
+    {
+      "description": "かな と別のキーとの同時押しを command キー+別のキーに割り当てる",
+      "manipulators": [
+        {
+          "type" : "basic",
+          "from" : {
+            "key_code": "japanese_kana"
+          },
+          "parameters": { "basic.to_if_alone_timeout_milliseconds": 300 },
+          "to_if_alone": [{ 
+            "key_code": "japanese_kana"
+          }],
+          "to": [{"key_code": "right_command"}]
+        }]
+    },
+    {
+      "description": "英数 の長押しを shift キー+別のキーに割り当てる",
+      "manipulators": [
+        {
+        "type" : "basic",
+        "from" : {
+          "key_code": "japanese_eisuu"
+        },
+        "parameters": { "basic.to_if_alone_timeout_milliseconds": 300 },
+        "to_if_alone": [{ 
+            "key_code": "japanese_eisuu"
+          }],
+          "to": [{"key_code": "left_shift"}]
+        }]
+    }
+  ]
+}

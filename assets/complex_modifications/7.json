@@ -1,0 +1,37 @@
+{
+  "title": "space と別のキーとの同時押しをそれぞれ control+option+command+別のキーに割り当てる",
+  "rules": [
+    {
+      "description": "space と別のキーとの同時押しをそれぞれ control+option+command+別    のキーに割り当てる",
+      "manipulators": [
+        {
+          "type" : "basic",
+          "from" : {
+            "key_code": "spacebar"
+          },
+          "parameters": { "basic.to_if_alone_timeout_milliseconds": 300 },
+          "to_if_alone": [{ 
+            "key_code": "spacebar"
+          }],
+          "to": [{
+            "key_code": "left_option",
+            "modifiers": ["left_command", "left_control"]
+          }]
+        }]
+    },
+    {
+      "description": "right_command を  shift+command+別    のキーに割り当てる",
+      "manipulators": [
+        {
+          "type" : "basic",
+          "from" : {
+            "key_code": "right_command"
+          },
+          "to": [{
+            "key_code": "right_command",
+            "modifiers": ["right_shift"]
+          }]
+        }]
+    }
+  ]
+}

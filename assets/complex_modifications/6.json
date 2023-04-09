@@ -1,0 +1,37 @@
+{
+  "title": "command + option + ctrl のショートカット",
+  "rules": [
+    {
+      "description": "command + option + ctrl + t で iTerm を開く",
+      "manipulators": [
+        {
+          "type" : "basic",
+          "from" : {
+            "key_code": "t",
+            "modifiers":{
+               "mandatory":["left_command", "left_option", "left_control"]
+            }
+          },
+          "to": [{
+            "shell_command": "/usr/bin/open -a iTerm.app"
+          }]
+        }]
+    },
+    {
+      "description": "command + option + ctrl + h で backspace",
+      "manipulators": [
+        {
+          "type" : "basic",
+          "from" : {
+            "key_code": "h",
+            "modifiers":{
+               "mandatory":["left_command", "left_option", "left_control"]
+            }
+          },
+          "to": [{
+            "key_code": "delete_or_backspace"
+          }]
+        }]
+    }
+  ]
+}

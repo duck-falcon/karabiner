@@ -1,0 +1,35 @@
+{
+  "title": "shift を ctrl に割り当てる",
+  "rules": [
+    {
+      "description": "left_shift を ctrl に割り当てる",
+      "manipulators": [
+        {
+          "type" : "basic",
+          "from" : {
+            "key_code": "left_shift"
+          },
+          "parameters": { "basic.to_if_alone_timeout_milliseconds": 300 },
+          "to_if_alone": [{
+            "key_code": "left_shift"
+          }],
+          "to": [{
+            "key_code": "left_control"
+          }]
+        }]
+    }, 
+    {
+      "description": "ctr を ecs に割り当てる",
+      "manipulators": [
+        {
+          "type" : "basic",
+          "from" : {
+            "key_code": "left_control"
+          },
+          "to": [{
+            "key_code": "escape"
+          }]
+        }]
+    }
+  ]
+}
