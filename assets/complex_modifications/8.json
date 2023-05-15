@@ -315,6 +315,47 @@
 				}],
 				"type": "basic"
 			}]
-		}
+		},
+                {
+                        "description": "command+option+control+. を>に割り当てる",
+                        "manipulators": [{
+                                "from": {
+                                        "key_code": "period",
+                                        "modifiers": {
+                                                "mandatory": [
+                                                        "left_command",
+                                                        "left_option",
+                                                        "left_control"
+                                                ]
+                                        }
+                                },
+                                "to": [{
+                                        "key_code": "period",
+                                        "modifiers": "left_shift"
+                                }],
+                                "type": "basic"
+                        }]
+                },
+                {
+                        "description": "command+option+control+, を<に割り当てる",
+                        "manipulators": [{
+                                "from": {
+                                        "key_code": "comma",
+                                        "modifiers": {
+                                                "mandatory": [
+                                                        "left_command",
+                                                        "left_option",
+                                                        "left_control"
+                                                ]
+                                        }
+                                },
+                                "to": [{
+                                        "key_code": "comma",
+                                        "modifiers": "left_shift"
+                                }],
+                                "type": "basic"
+                        }]
+                }
 	]
 }
+
